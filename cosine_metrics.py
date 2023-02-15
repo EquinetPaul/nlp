@@ -9,9 +9,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 def compute_cosine_similarity(docs, method="tfidf"):
   
     if method=="bow":
-      vectorizer = CountVectorizer()
+        vectorizer = CountVectorizer()
     if method=="tfidf":
-      vectorizer = TfidfVectorizer()
+        vectorizer = TfidfVectorizer()
 
     doc_representation = vectorizer.fit_transform(docs)
     
