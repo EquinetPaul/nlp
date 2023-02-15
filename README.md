@@ -3,7 +3,7 @@ NLP lib
 
 
 ### cosine_metrics
-Library that allows computation of cosine similarity on documents using different implemented methods of document representation or directly on embedding.
+Library that computes cosine similarity on documents using different implemented methods of document representation or directly on embedding.
 
 Methods:
 1. TF-IDF 
