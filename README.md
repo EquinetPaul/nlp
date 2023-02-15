@@ -7,7 +7,7 @@ Library that computes cosine similarity on documents using different implemented
 
 Methods:
 1. TF-IDF 
-2.Bag-of-words (CountVectorizer) 
+2. Bag-of-words (CountVectorizer) 
     
 Usage:
 - docs: array of string (the document to measure)
