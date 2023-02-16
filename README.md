@@ -66,3 +66,8 @@ cosine_metrics.evaluate_embeddings(embeddings)
 # return the cosine sililarity matrix computed on the specified method of document representation
 cosine_metrics.compute_cosine_similarity_method(docs, method)
 ```
+
+
+# Sources
+- https://www.kaggle.com/code/jbencina/clustering-documents-with-tfidf-and-kmeans
+- Commented with GPT
