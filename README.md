@@ -13,16 +13,16 @@ Usage:
 - docs: array of string (the document to measure)
 - methods: "tfidf", "bow"
 ```python
-evaluate_methods(docs)
 # return the mean of the cosine similarity matrix computed on each methods
+evaluate_methods(docs)
 ```
 
 ```python
-evaluate_embeddings(embeddings)
 # return the mean of the cosine similarity matrix computed on the embedding
+evaluate_embeddings(embeddings)
 ```
 
 ```python
-compute_cosine_similarity_method(docs, method)
 # return the cosine sililarity matrix computed on the specified method of document representation
+compute_cosine_similarity_method(docs, method)
 ```
