@@ -23,19 +23,25 @@ Methods:
 2. Bag-of-words (CountVectorizer) 
     
 Usage:
-- docs: array of string (the document to measure)
+```python
+import cosine_metrics
+# Load your data (docs)
+```
+
+- docs: array of string (the document to measure, your data)
 - methods: "tfidf", "bow"
+- 
 ```python
 # return the mean of the cosine similarity matrix computed on each methods
-evaluate_methods(docs)
+cosine_metrics.evaluate_methods(docs)
 ```
 
 ```python
 # return the mean of the cosine similarity matrix computed on the embedding
-evaluate_embeddings(embeddings)
+cosine_metrics.evaluate_embeddings(embeddings)
 ```
 
 ```python
 # return the cosine sililarity matrix computed on the specified method of document representation
-compute_cosine_similarity_method(docs, method)
+cosine_metrics.compute_cosine_similarity_method(docs, method)
 ```
