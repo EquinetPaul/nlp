@@ -4,7 +4,7 @@ NLP lib
 # TFIDF - KMeans
 This library performs TF-IDF vectorization on a corpus of documents and determines the optimal number of clusters of KMeans. Once the optimal number of clusters has been identified, the library creates a topic representation for each cluster by selecting the top n terms that are most representative of that cluster.
 
-Usage:
+## Usage:
 ```python
 import pandas as pd
 import tfidf_kmeans
@@ -24,11 +24,11 @@ tfidf_kmeans.compute(
 # cosine_metrics
 Library that computes cosine similarity on documents using different implemented methods of document representation or directly on embedding.
 
-Methods:
+## Methods:
 1. TF-IDF 
 2. Bag-of-words (CountVectorizer) 
     
-Usage:
+## Usage:
 ```python
 import cosine_metrics
 # Load your data (docs)
