@@ -21,6 +21,10 @@ tfidf_kmeans.compute(
     )
 ```
 
+#### To do
+- Use a metric to measure the relevance of the clusters found
+- Pass custom TF-IDF and KMeans models as parameters
+
 # cosine_metrics
 Library that computes cosine similarity on documents using different implemented methods of document representation or directly on embedding.
 
