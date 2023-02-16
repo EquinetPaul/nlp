@@ -35,6 +35,12 @@ tfidf_kmeans.compute(
     )
 ```
 
+```bash
+0 ['windows', 'drive', 'dos', 'file', 'os']
+1 ['space','launch','orbit','lunar','planet']
+2 ['key', 'encryption', 'keys', 'encrypted', 'security']
+```
+
 #### To do
 - Use a metric to measure the relevance of the clusters found
 - Pass custom TF-IDF and KMeans models as parameters
