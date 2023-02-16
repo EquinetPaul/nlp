@@ -43,7 +43,7 @@ tfidf_kmeans.compute(
 # cosine_metrics <a id="cosine_metrics"></a>
 Library that computes cosine similarity on documents using different implemented methods of document representation or directly on embedding.
 
-## Methods:
+## Document representation methods:
 1. TF-IDF 
 2. Bag-of-words (CountVectorizer) 
     
