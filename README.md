@@ -55,7 +55,7 @@ import cosine_metrics
 
 - docs: array of string (the document to measure, your data)
 - methods: "tfidf", "bow"
-- 
+
 ```python
 # return the mean of the cosine similarity matrix computed on each methods
 cosine_metrics.evaluate_methods(docs)
