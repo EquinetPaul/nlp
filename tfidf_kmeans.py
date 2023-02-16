@@ -148,8 +148,3 @@ def compute(data, k_max, n_top_words):
     plot_clusters.show()
     # Wait for user input
     input()
-
-data = pd.read_csv("data.csv", encoding="utf-8")["Description courte"].to_list()
-data = [d.lower() for d in data if type(d)==str]
-
-compute(data, 20, 5)
