@@ -4,6 +4,11 @@ NLP lib
 # TFIDF - KMeans
 This library performs TF-IDF vectorization on a corpus of documents and determines the optimal number of clusters of KMeans. Once the optimal number of clusters has been identified, the library creates a topic representation for each cluster by selecting the top n terms that are most representative of that cluster.
 
+## Method
+To determine the optimal nu
+
+![plot_tfidf_kmeans](https://github.com/EquinetPaul/nlp/blob/main/plot_tfidf_kmeans.PNG?raw=true)
+
 ## Usage:
 ```python
 import pandas as pd
