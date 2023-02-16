@@ -7,7 +7,7 @@ This library performs TF-IDF vectorization on a corpus of documents and determin
 ## Method
 To determine the optimal nu
 
-![plot_tfidf_kmeans](https://github.com/EquinetPaul/nlp/blob/main/plot_tfidf_kmeans.PNG?raw=true)
+![plot_tfidf_kmeans](https://github.com/EquinetPaul/EquinetPaul/blob/main/plot_tfidf_kmeans.PNG?raw=true)
 
 ## Usage:
 ```python
