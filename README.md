@@ -39,6 +39,8 @@ tfidf_kmeans.compute(
 0 ['windows', 'drive', 'dos', 'file', 'os']
 1 ['space','launch','orbit','lunar','planet']
 2 ['key', 'encryption', 'keys', 'encrypted', 'security']
+...
+8 ['christmas', 'santa', 'gifts', 'yule', 'reindeer']
 ```
 
 #### To do
