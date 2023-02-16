@@ -6,8 +6,14 @@ This library performs TF-IDF vectorization on a corpus of documents and determin
 
 Usage:
 ```python
+import pandas as pd
 import tfidf_kmeans
-# Load your data (list of string element)
+
+# Load data
+data = pd.read_csv("data.csv", encoding="utf-8")["column_to_compute"].to_list()
+data = [d.lower() for d in data if type(d)==str]
+
+# Apply Topic Modeling
 tfidf_kmeans.compute(
     data, 
     k_max = 10, # Used to determine the best number of clusters in range(2, k_max)
