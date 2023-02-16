@@ -4,10 +4,15 @@ NLP lib
 # TFIDF - KMeans
 This library performs TF-IDF vectorization on a corpus of documents and determines the optimal number of clusters of KMeans. Once the optimal number of clusters has been identified, the library creates a topic representation for each cluster by selecting the top n terms that are most representative of that cluster.
 
-## Method
-To determine the optimal nu
+## Method & Results
+To determine the optimal number of clusters of KMeans we use the "Elbow method" with the inertia of each cluster.
 
 ![plot_tfidf_kmeans](https://github.com/EquinetPaul/EquinetPaul/blob/main/plot_tfidf_kmeans.PNG?raw=true)
+
+The results of the computation is:
+- Topics with representative words
+- Plot used to determine the optimal number of clusters
+- Plot of the clusters (reduced with tsne & pca)
 
 ## Usage:
 ```python
@@ -29,6 +34,7 @@ tfidf_kmeans.compute(
 #### To do
 - Use a metric to measure the relevance of the clusters found
 - Pass custom TF-IDF and KMeans models as parameters
+- Add parameters: display plots or not
 
 # cosine_metrics
 Library that computes cosine similarity on documents using different implemented methods of document representation or directly on embedding.
