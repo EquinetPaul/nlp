@@ -1,7 +1,10 @@
 # NLP
-NLP lib 
+NLP lib
 
-# tfidf_kmeans
+# Table of content
+[tfidf_kmeans](#tfidf_kmeans)
+
+# tfidf_kmeans {#tfidf_kmeans}
 This library performs TF-IDF vectorization on a corpus of documents and determines the optimal number of clusters of KMeans. Once the optimal number of clusters has been identified, the library creates a topic representation for each cluster by selecting the top n terms that are most representative of that cluster.
 
 ## Method & Results
@@ -68,6 +71,6 @@ cosine_metrics.compute_cosine_similarity_method(docs, method)
 ```
 
 
-# Sources
+# References
 - https://www.kaggle.com/code/jbencina/clustering-documents-with-tfidf-and-kmeans
 - Commented with GPT
