@@ -31,7 +31,7 @@ data = [d.lower() for d in data if type(d)==str]
 tfidf_kmeans.compute(
     data, 
     k_max = 10, # Used to determine the best number of clusters in range(2, k_max)
-    n_top_words = 5 # Used to show the n_top_words of each clusters for topic representatio 
+    n_top_words = 5 # Used to show the n_top_words of each clusters for topic representation
     )
 ```
 
