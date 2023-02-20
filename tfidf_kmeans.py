@@ -126,7 +126,7 @@ def plot_tsne_pca(data, labels):
     return f
 
 # Main function that performs topic modeling
-def compute(data, k_max, n_top_words):
+def compute(data, k_max, n_top_words, display_plots=False):
     # Apply TF-IDF vectorization to the input data
     vectors, vectorizer = apply_tfidf(data)
     # Find the optimal number of clusters
@@ -142,9 +142,10 @@ def compute(data, k_max, n_top_words):
     for key, value in clusters.items():
         print(key, value)
 
-    # Show the plot of inertia vs number of clusters
-    plot_inertia.show()
-    # Show the plot of clusters
-    plot_clusters.show()
-    # Wait for user input
-    input()
+    if display_plots:
+        # Show the plot of inertia vs number of clusters
+        plot_inertia.show()
+        # Show the plot of clusters
+        plot_clusters.show()
+        # Wait for user input
+        input()
