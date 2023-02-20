@@ -15,7 +15,7 @@ To determine the optimal number of clusters of KMeans we use the "Elbow method" 
 
 The results of the computation is:
 - Topics with representative words
-- Plot used to determine the optimal number of clusters
+- Plot used to determine the optimal number of clusters (based on the evolution of the inertia)
 - Plot of the clusters (reduced with tsne & pca)
 
 ## Usage:
@@ -47,7 +47,7 @@ tfidf_kmeans.compute(
 #### To do
 - Use a metric to measure the relevance of the clusters found
 - Pass custom TF-IDF and KMeans models as parameters
-- Add parameters: display plots or not
+- Add parameters: display plots or not (done)
 - Add parameters: display logs or not
 
 # cosine_metrics <a id="cosine_metrics"></a>
