@@ -49,6 +49,7 @@ tfidf_kmeans.compute(
 - Pass custom TF-IDF and KMeans models as parameters
 - Add parameters: display plots or not (done)
 - Add parameters: display logs or not
+- Upgrade Clusters Plot (using plotly?)
 
 # cosine_metrics <a id="cosine_metrics"></a>
 Library that computes cosine similarity on documents using different implemented methods of document representation or directly on embedding.
