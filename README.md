@@ -47,10 +47,11 @@ tfidf_kmeans.compute(
 #### To do
 - Use a metric to measure the relevance of the clusters found
 - Pass custom TF-IDF and KMeans models as parameters
-- Add parameters: display plots or not (done)
-- Add parameters: display logs or not
+- Add parameter: display plots or not (done)
+- Add parameter: display logs or not
 - Upgrade Clusters Plot (using plotly?)
 - Change the legend position for TSNE Cluster Plot
+- Add parameter: apply a simple clean to data
 
 # cosine_metrics <a id="cosine_metrics"></a>
 Library that computes cosine similarity on documents using different implemented methods of document representation or directly on embedding.
