@@ -50,6 +50,7 @@ tfidf_kmeans.compute(
 - Add parameters: display plots or not (done)
 - Add parameters: display logs or not
 - Upgrade Clusters Plot (using plotly?)
+- Change the legend position for TSNE Cluster Plot
 
 # cosine_metrics <a id="cosine_metrics"></a>
 Library that computes cosine similarity on documents using different implemented methods of document representation or directly on embedding.
