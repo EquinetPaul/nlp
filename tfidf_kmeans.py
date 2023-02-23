@@ -112,6 +112,7 @@ def plot_tsne_pca(data, labels):
 
     # Create a scatter plot of the selected data points using the TSNE coordinates
     f, ax = plt.subplots()
+    f.set_size_inches(10, 6)
     ax.scatter(tsne[idx, 0], tsne[idx, 1], color=label_subset)
     ax.set_title('TSNE Cluster Plot')
 
@@ -120,7 +121,7 @@ def plot_tsne_pca(data, labels):
     for i in range(max_label + 1):
         handle = ax.scatter([], [], c=cmap(i), label='Cluster {}'.format(i))
         handles.append(handle)
-    ax.legend(handles=handles)
+    ax.legend(handles=handles, loc='center right', bbox_to_anchor=(1.1, 0.5))
 
     return f
 
