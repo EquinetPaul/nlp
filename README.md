@@ -68,6 +68,7 @@ tfidf_kmeans.compute(
     data,
     tfidf_vectorizer = vectorizer
     )
+```
 
 #### To do
 - Use a metric to measure the relevance of the clusters found
