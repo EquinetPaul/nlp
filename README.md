@@ -83,7 +83,7 @@ kmeans_parameters = {
     'init': 'k-means++', 
     'n_init': 100, 
     'max_iter': 10, 
-    'tol': 0.0001
+    'tol': 0.001
  }
 
 # Apply Topic Modeling
