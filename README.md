@@ -44,10 +44,35 @@ tfidf_kmeans.compute(
 8 ['christmas', 'santa', 'gifts', 'yule', 'reindeer']
 ```
 
+### Custom TF-IDF vectorizer
+```python
+import tfidf_kmeans
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Load data
+data = ...
+
+# Define TF-IDF
+tfidf_parameters = {
+    'ngram_range' : (1, 2),
+    'stop_words' : stop_words,
+    'lowercase': True,
+    'min_df': 1,
+    'max_df': 0.8,
+}
+vectorizer = TfidfVectorizer(**tfidf_parameters)
+
+# Apply Topic Modeling
+tfidf_kmeans.compute(
+    data,
+    tfidf_vectorizer = vectorizer
+    )
+
 #### To do
 - Use a metric to measure the relevance of the clusters found
-- Pass custom TF-IDF and KMeans models as parameters
-- Add parameter: display plots or not (done)
+- Pass custom TF-IDF and KMeans models as parameters (✅)
+- Add parameter: display plots or not (✅)
 - Add parameter: display logs or not
 - Upgrade Clusters Plot (using plotly?)
 - Change the legend position for TSNE Cluster Plot
