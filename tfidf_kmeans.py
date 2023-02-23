@@ -27,18 +27,17 @@ def get_top_keywords(data, clusters, labels, n_terms):
     return res_clusters
 
 # Apply TF-IDF on the corpus
-def apply_tfidf(corpus):
-    vectorizer = TfidfVectorizer()
+def apply_tfidf(corpus, vectorizer):
     vectors = vectorizer.fit_transform(corpus)
     return vectors, vectorizer
 
 # Apply KMeans on vectors
-def apply_kmeans(vectors, n_clusters):
-    kmeans = KMeans(n_clusters=n_clusters, random_state=0, n_init="auto").fit_predict(vectors)
+def apply_kmeans(vectors, n_clusters, kmeans_parameters):
+    kmeans = KMeans(n_clusters=n_clusters, **kmeans_parameters).fit_predict(vectors)
     return kmeans
 
 # Find the optimal number of clusters (k) using the elbow method
-def find_optimal_k(vectors, k_max):
+def find_optimal_k(vectors, k_max, kmeans_parameters):
     inertias = []
     iter_max = range(2,k_max+1)
     batch_perc = 0.5
@@ -46,7 +45,7 @@ def find_optimal_k(vectors, k_max):
 
     # Compute KMeans and get its inertia for different values of k
     for k in tqdm(iter_max):
-        kmeans = KMeans(n_clusters=k, random_state=0, n_init="auto").fit(vectors)
+        kmeans = KMeans(n_clusters=k, **kmeans_parameters).fit(vectors)
         inertias.append(kmeans.inertia_)
 
     # Plot the inertia values vs. the number of clusters
@@ -126,13 +125,45 @@ def plot_tsne_pca(data, labels):
     return f
 
 # Main function that performs topic modeling
-def compute(data, k_max, n_top_words, display_plots=False):
+def compute(data,
+        k_max=10,
+        n_top_words=5,
+        display_plots=False,
+        tfidf_vectorizer=TfidfVectorizer(),
+        kmeans_parameters={'init': 'k-means++', 'n_init': 'auto', 'max_iter': 100}):
+
+    """
+    Parameters
+    ----------
+    data: list
+        List of string on which Topic Modeling gonna be done
+
+    k_max: int (Optional default 10)
+        Number of clusters on which KMeans will be computed to find the optimal one
+
+    display_plots: bool (Optional default False)
+
+    n_top_words: int (Optional default 5)
+        Number of words displayed for each found clusters
+
+    tfidf_vectorizer: sklearn.feature_extraction.text.TfidfVectorizer (Optional default simplest vectorizer)
+        Custom TF-IDF vectorizer
+
+    kmeans_parameters: dict (Optional):
+        Custom K-Means parameters
+
+    Returns
+    ----------
+
+    Display found clusters and their top n words
+    """
+
     # Apply TF-IDF vectorization to the input data
-    vectors, vectorizer = apply_tfidf(data)
+    vectors, vectorizer = apply_tfidf(data, tfidf_vectorizer)
     # Find the optimal number of clusters
-    best_k, plot_inertia = find_optimal_k(vectors, k_max)
+    best_k, plot_inertia = find_optimal_k(vectors, k_max, kmeans_parameters)
     # Apply KMeans clustering with the optimal number of clusters
-    kmeans = apply_kmeans(vectors, best_k)
+    kmeans = apply_kmeans(vectors, best_k, kmeans_parameters)
     # Get the top keywords for each cluster
     clusters = get_top_keywords(vectors, kmeans, vectorizer.get_feature_names_out(), n_top_words)
     # Plot the clusters using PCA and t-SNE dimension reduction techniques
