@@ -70,6 +70,29 @@ tfidf_kmeans.compute(
     )
 ```
 
+### Custom KMeans parameters
+```python
+import tfidf_kmeans
+import pandas as pd
+
+# Load data
+data = ...
+
+# Define K-Means parameters
+kmeans_parameters = {
+    'init': 'k-means++', 
+    'n_init': 100, 
+    'max_iter': 10, 
+    'tol': 0.0001
+ }
+
+# Apply Topic Modeling
+tfidf_kmeans.compute(
+    data,
+    kmeans_parameters = kmeans_parameters
+    )
+```
+
 #### To do
 - Use a metric to measure the relevance of the clusters found
 - Pass custom TF-IDF and KMeans models as parameters (✅)
