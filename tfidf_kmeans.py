@@ -90,15 +90,15 @@ def find_optimal_k(vectors, k_max):
 def plot_tsne_pca(data, labels):
     # Get the maximum label in the dataset
     max_label = max(labels)
-    # Randomly select 3000 data points
-    max_items = np.random.choice(range(data.shape[0]), size=3000, replace=False)
+    # Randomly select 70% of data points (for PCA and TSNE)
+    max_items = np.random.choice(range(data.shape[0]), size=int((0.7 * data.shape[0])), replace=False)
 
     # Compute PCA and TSNE on the randomly selected 3000 data points
     pca = PCA(n_components=2).fit_transform(np.array(data[max_items,:].todense()))
     tsne = TSNE().fit_transform(PCA(n_components=50).fit_transform(np.array(data[max_items,:].todense())))
 
-    # Randomly select 300 data points for visualization
-    idx = np.random.choice(range(pca.shape[0]), size=300, replace=False)
+    # Randomly select 10% data points for visualization
+    idx = np.random.choice(range(pca.shape[0]), size=int((0.10 * data.shape[0])), replace=False)
     # Get the labels of the selected data points
     label_subset = labels[max_items]
 
