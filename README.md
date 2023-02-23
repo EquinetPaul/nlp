@@ -52,6 +52,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load data
 data = ...
+stop_words = ...
 
 # Define TF-IDF
 tfidf_parameters = {
