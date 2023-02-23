@@ -100,7 +100,7 @@ tfidf_kmeans.compute(
 - Add parameter: display plots or not (✅)
 - Add parameter: display logs or not
 - Upgrade Clusters Plot (using plotly?)
-- Change the legend position for TSNE Cluster Plot
+- Change the legend position for TSNE Cluster Plot (✅)
 - Add parameter: apply a simple clean to data
 
 # cosine_metrics <a id="cosine_metrics"></a>
