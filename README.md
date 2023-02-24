@@ -97,6 +97,7 @@ tfidf_kmeans.compute(
 #### To do
 - Use a metric to measure the relevance of the clusters found
 - Pass custom TF-IDF and KMeans models as parameters (✅)
+- Use embedding instead TF-IDF representation
 - Add parameter: display plots or not (✅)
 - Add parameter: display logs or not
 - Upgrade Clusters Plot (using plotly?)
