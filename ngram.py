@@ -48,3 +48,16 @@ class Ngram():
             self.n = obj["n"]
             self.chain_frequency = obj["chain_frequency"]
             self.chain = obj["chain"]
+
+            
+# usage
+# chain = Ngram(n=2)
+# # for sentence in tqdm(df["speech"][df.title.str.startswith("Déclaration")]):
+# for sentence in tqdm(df["speech"]):
+#     try:
+#         sentence = "[start] " + sentence.replace(".", " [end] . [start]").replace("?", " [end] ? [start]").replace("!", " [end] ! [start]").replace(",", ", ")
+#         cleaned = " ".join(sentence.replace("\n", "").strip().split())
+#         chain.train(cleaned)
+#     except Exception as e:
+#         pass
+# chain.normalize()
